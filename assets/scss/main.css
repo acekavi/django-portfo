@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+body {
+  background: #121212;
+}
+
+.customNavlinks {
+  position: relative;
+  color: rgb(172, 172, 172) !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  font-family: "Ubuntu Mono", monospace;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.customNavlinks:hover {
+  color: rgb(255, 255, 255) !important;
+}
+.customNavlinks::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.customNavlinks:hover::before {
+  transform: scaleX(1);
+}
+
+.active {
+  color: #fff;
+}
+.active::before {
+  transform: scaleX(1);
+}
+
+.navLogo {
+  position: relative;
+}
+.navLogo::before {
+  content: "ACEKAVI";
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  font-style: italic;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  letter-spacing: 3px;
+}
+
+.IconContainer {
+  cursor: pointer;
+}
+.IconContainer:hover .bar1,
+.IconContainer:hover .bar2,
+.IconContainer:hover .bar3 {
+  width: 25px;
+  background-color: rgb(255, 255, 255);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  height: 2px;
+  background-color: rgb(224, 224, 224);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.bar1 {
+  width: 8px;
+}
+
+.bar2 {
+  width: 20px;
+}
+
+.bar3 {
+  width: 15px;
+}
+
+.change .bar1 {
+  width: 25px;
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {
+  width: 25px;
+  opacity: 0;
+}
+
+.change .bar3 {
+  width: 25px;
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.showHide {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
