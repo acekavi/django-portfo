@@ -38,6 +38,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{% static 'scss/main.css' %}" />
+    <script src="https://kit.fontawesome.com/2ec2c46da6.js" crossorigin="anonymous"></script>
+
 
     <!-- favicons -->
     <link
@@ -52,55 +54,44 @@
   <body>
 
     <nav class="container-fluid">
-      <div class="row justify-content-center align-content-center">
-        <div class="logo col-12 text-center position-relative">
-          <a href="#" class="navLogo"
-          ><img src="{% static 'images/Sign.png' %}" alt="" width="75"
+      <div class="position-relative">
+        <div class="logo text-center position-relative">
+          <a href="/" class="navLogo"
+          ><img src="{% static 'images/Sign.png' %}" alt="" width="75" class="mt-1"
           /></a>
 
-          <div class="navIcons position-absolute translate-middle-y top-50 end-0 me-2">
-            <div class="socials float-start me-3 align-content-center justify-content-center">
-              <i class="" >FB</i>
-              <i class="" >IG</i>
-              <i class="" >Li</i>
+            <div class="socials position-absolute translate-middle-y top-50 start-0 ms-3">
+              <a href="https://www.facebook.com/acekavi/" class="socialLinks"><i class="fa-brands fa-facebook-f fa-md m-1"></i></i></a>
+              <a href="https://www.instagram.com/acekavi/" class="socialLinks"><i class="fa-brands fa-instagram fa-md m-1"></i></a>
+              <a href="https://www.linkedin.com/in/acekavi" class="socialLinks"><i class="fa-brands fa-linkedin fa-md m-1"></i></a>
+              <a href="https://www.behance.net/acekavi/" class="socialLinks"><i class="fa-brands fa-behance fa-md m-1"></i></i></a> 
             </div>
 
-            <div class="IconContainer float-end m-1" onclick="navToggle(this)">
-              <div class="bar1"></div>
-              <div class="bar2"></div>
-              <div class="bar3"></div>
+            <div class="IconContainer position-absolute translate-middle-y top-50 end-0 me-3">
+              <div class="hambars"></div>
+              <div class="hambars"></div>
+              <div class="hambars"></div>
             </div>
-          </div>
         </div>
 
-        <ul class="navLinks col-12 text-end" onclick="navToggle">
-          <li><a href="#" class="customNavlinks">Home</a></li>
-          <li><a href="#" class="customNavlinks">Projects</a></li>
-          <li><a href="#" class="customNavlinks">Designs</a></li>
-          <li><a href="#" class="customNavlinks">Contact</a></li>
-          <li><a href="#" class="customNavlinks">Blog</a></li>
+        <ul class="navLinks position-absolute end-0 text-end me-3" onclick="navToggle">
+          <li><a href="/" class="customNavlinks">Home</a></li>
+          <li><a href="/projects" class="customNavlinks">Projects</a></li>
+          <li><a href="/designs" class="customNavlinks">Designs</a></li>
+          <li><a href="/contact" class="customNavlinks">Contact</a></li>
+          <li><a href="/blog" class="customNavlinks">Blog</a></li>
         </ul>
     </nav>
 
-    <script>
-      function navToggle(x) {
-        x.classList.toggle("change");
-        y = document.querySelectorAll('.customNavlinks');
-        y.forEach(element => {
-          if(x.classList.contains("change")){
-            element.style.opacity = 1;
-          }else{
-            element.style.opacity = 0;
-          }
-        });
-      }
-    </script>
     {% block content %}{% endblock %}
+    
     <!-- Compiled and minified JavaScript -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>

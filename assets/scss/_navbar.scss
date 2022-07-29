@@ -1,0 +1,108 @@
+.navLinks{
+  list-style-type: none !important;
+  display: none;
+  transition: 0.3 ease-in-out;
+}
+
+.customNavlinks {
+  position: relative;
+  color: $linkColor !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  font-family: "Ubuntu Mono", monospace;
+  transition: opacity 0.3s ease-in;
+
+  &:hover {
+    color: $linkHover !important;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: $linkHover;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+.active {
+  color: $linkHover !important;
+}
+
+.navLogo {
+  position: relative;
+
+  &::before {
+    content: "ACEKAVI";
+    font-family: "Bebas Neue", cursive;
+    font-size: 2rem;
+    font-style: italic;
+    color: $linkHover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    letter-spacing: 3px;
+  }
+}
+
+.IconContainer {
+  cursor: pointer;
+  &:hover {
+    .hambars {
+      width: 25px;
+      background-color: $linkHover;
+    }
+  }
+  width: 25px;
+}
+
+.hambars {
+  height: 2px;
+  background-color: $linkColor;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hambars:nth-child(1) {
+  width: 8px;
+}
+.hambars:nth-child(2) {
+  width: 20px;
+}
+.hambars:nth-child(3) {
+  width: 15px;
+}
+
+.change .hambars:nth-child(1) {
+  width: 25px;
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .hambars:nth-child(2) {
+  width: 25px;
+  opacity: 0;
+}
+
+.change .hambars:nth-child(3) {
+  width: 25px;
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.socialLinks {
+  color: $linkColor;
+  transition: 0.4s ease-out;
+
+  &:hover {
+    color: $linkHover;
+  }
+}

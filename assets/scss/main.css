@@ -4,13 +4,18 @@ body {
   background: #121212;
 }
 
+.navLinks {
+  list-style-type: none !important;
+  display: none;
+  transition: 0.3 ease-in-out;
+}
+
 .customNavlinks {
   position: relative;
-  color: rgb(172, 172, 172) !important;
+  color: rgba(255, 255, 255, 0.47) !important;
   text-decoration: none !important;
   text-transform: uppercase;
   font-family: "Ubuntu Mono", monospace;
-  opacity: 0;
   transition: opacity 0.3s ease-in;
 }
 .customNavlinks:hover {
@@ -24,7 +29,7 @@ body {
   height: 1px;
   bottom: -5px;
   left: 0;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -33,10 +38,7 @@ body {
 }
 
 .active {
-  color: #fff;
-}
-.active::before {
-  transform: scaleX(1);
+  color: rgb(255, 255, 255) !important;
 }
 
 .navLogo {
@@ -47,7 +49,7 @@ body {
   font-family: "Bebas Neue", cursive;
   font-size: 2rem;
   font-style: italic;
-  color: #fff;
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -57,50 +59,51 @@ body {
 
 .IconContainer {
   cursor: pointer;
+  width: 25px;
 }
-.IconContainer:hover .bar1,
-.IconContainer:hover .bar2,
-.IconContainer:hover .bar3 {
+.IconContainer:hover .hambars {
   width: 25px;
   background-color: rgb(255, 255, 255);
 }
 
-.bar1,
-.bar2,
-.bar3 {
+.hambars {
   height: 2px;
-  background-color: rgb(224, 224, 224);
+  background-color: rgba(255, 255, 255, 0.47);
   margin: 6px 0;
   transition: 0.4s;
 }
 
-.bar1 {
+.hambars:nth-child(1) {
   width: 8px;
 }
 
-.bar2 {
+.hambars:nth-child(2) {
   width: 20px;
 }
 
-.bar3 {
+.hambars:nth-child(3) {
   width: 15px;
 }
 
-.change .bar1 {
+.change .hambars:nth-child(1) {
   width: 25px;
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.change .bar2 {
+.change .hambars:nth-child(2) {
   width: 25px;
   opacity: 0;
 }
 
-.change .bar3 {
+.change .hambars:nth-child(3) {
   width: 25px;
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.showHide {
-  display: none;
+.socialLinks {
+  color: rgba(255, 255, 255, 0.47);
+  transition: 0.4s ease-out;
+}
+.socialLinks:hover {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=main.css.map */
