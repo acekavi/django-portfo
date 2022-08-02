@@ -1,7 +1,51 @@
-{% extends "layout.html" %}
-{% load static %}
-{% block title %}Home{% endblock %}
+{% extends "layout.html" %} {% load static %} {% block title %}Home{% endblock%}
 {% block content %}
 
-<h1>Home</h1>
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse g-5 py-5 justify-content-center align-items-center">
+    <div class="col-10 col-sm-12 col-lg-6 position-relative">
+      <img
+        src="{% static 'images/Masked.svg' %}"
+        class="d-block mx-lg-auto mx-sm-auto figure-img"
+        alt="Oni Masked by acekavi"
+        height="450"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="col-lg-6 text-uppercase homeText text-start">
+      
+      <p class="display-6 py-2">Do what excites!</i></p><br>
+
+      <h3>Hi! I'm</h3>
+      <h2 class="display-2">Avishka Kavinda</h2>
+      <h4 class="lh-1 mb-2">Creative Developer</h4>
+      <h5>
+        From Sri Lanka
+      </h5>
+      
+      <div class="btn-group homeBtns mt-3" role="group" aria-label="Home Buttons">
+        <button type="button" class="btn" data-mdb-color="dark">
+          Resume
+        </button>
+        <button type="button" class="btn" data-mdb-color="dark">
+          Projects
+        </button>
+        <button type="button" class="btn" data-mdb-color="dark">
+          Contact
+        </button>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("body").css({
+      "background-image": "url('{% static 'images/homeBG.svg' %}')",
+    });
+  });
+</script>
 {% endblock %}

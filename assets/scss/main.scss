@@ -1,11 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;1,400;1,500;1,600&family=Source+Sans+Pro:wght@200;300;400;600&family=Square+Peg&family=Zilla+Slab:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
-$linkColor: rgba(255, 255, 255, 0.47);
-$linkHover: rgb(255, 255, 255);
+
+$secondaryColor: rgba(255, 255, 255, 0.47);
+$primaryColor: rgb(255, 255, 255);
+$primaryAccent: rgb(12,94,164);
+$importantColor: #f00034;
+$accentFont: 'Zilla Slab', serif;
+$primaryFont: 'Source Sans Pro', sans-serif;
+$secondaryFont: 'Playfair Display', serif;
 
 body {
   background: #121212;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center;
 }
 
 @import 'navbar';

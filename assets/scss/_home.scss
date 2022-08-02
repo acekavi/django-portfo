@@ -1,0 +1,96 @@
+.homeText {
+  font-family: $accentFont !important;
+  color: $primaryColor;
+
+  p {
+    position: relative;
+    opacity: 0.67;
+    font-family: "Square Peg", cursive;
+    display: inline-block;
+    border-bottom: 2px $importantColor solid;
+    text-transform: none;
+    padding: 0 0.5rem;
+
+    &::before {
+      font-family: Arial;
+      content: "\201C";
+      color: $importantColor;
+    }
+
+    &::after {
+      font-family: Arial;
+      color: $importantColor;
+      content: "\201D";
+    }
+  }
+
+  h2 {
+    opacity: 0.86;
+    font-weight: 800;
+
+    small {
+      margin: 0;
+      padding: 0;
+      line-height: 1rem;
+    }
+  }
+
+  h3 {
+    opacity: 0.5;
+    font-weight: 200;
+  }
+
+  h4 {
+    opacity: 0.67;
+    font-style: italic;
+    font-weight: 400;
+
+    &::after {
+      content: ">";
+      color: $importantColor;
+      opacity: 1;
+      font-weight: 600;
+    }
+
+    &::before {
+      content: "</";
+      color: $importantColor;
+      opacity: 1;
+      font-weight: 600;
+    }
+  }
+
+  h5 {
+    opacity: 0.3;
+    font-weight: 200;
+  }
+}
+
+.resetLinks {
+  color: $secondaryColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $primaryColor;
+  }
+}
+
+.homeBtns{
+  button{
+    font-family: $primaryFont;
+    color: $secondaryColor;
+    border-radius: 0;
+    border-right: 2px $primaryColor solid;
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+
+    &:hover{
+      color: $primaryColor;
+    }
+
+    &:last-child{
+      border: none;
+    }
+  }
+
+}

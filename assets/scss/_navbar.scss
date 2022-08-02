@@ -6,14 +6,14 @@
 
 .customNavlinks {
   position: relative;
-  color: $linkColor !important;
+  color: $secondaryColor !important;
   text-decoration: none !important;
   text-transform: uppercase;
-  font-family: "Ubuntu Mono", monospace;
+  font-family: $accentFont;
   transition: opacity 0.3s ease-in;
 
   &:hover {
-    color: $linkHover !important;
+    color: $primaryColor !important;
   }
 
   &::before {
@@ -24,7 +24,7 @@
     height: 1px;
     bottom: -5px;
     left: 0;
-    background-color: $linkHover;
+    background-color: $primaryColor;
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
@@ -35,7 +35,7 @@
 }
 
 .active {
-  color: $linkHover !important;
+  color: $primaryColor !important;
 }
 
 .navLogo {
@@ -46,7 +46,7 @@
     font-family: "Bebas Neue", cursive;
     font-size: 2rem;
     font-style: italic;
-    color: $linkHover;
+    color: $primaryColor;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -60,7 +60,7 @@
   &:hover {
     .hambars {
       width: 25px;
-      background-color: $linkHover;
+      background-color: $primaryColor;
     }
   }
   width: 25px;
@@ -68,7 +68,7 @@
 
 .hambars {
   height: 2px;
-  background-color: $linkColor;
+  background-color: $secondaryColor;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -99,10 +99,10 @@
 }
 
 .socialLinks {
-  color: $linkColor;
+  color: $secondaryColor;
   transition: 0.4s ease-out;
 
   &:hover {
-    color: $linkHover;
+    color: $primaryColor;
   }
 }

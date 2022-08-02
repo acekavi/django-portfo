@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;1,400;1,500;1,600&family=Source+Sans+Pro:wght@200;300;400;600&family=Square+Peg&family=Zilla+Slab:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 body {
   background: #121212;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .navLinks {
@@ -15,7 +20,7 @@ body {
   color: rgba(255, 255, 255, 0.47) !important;
   text-decoration: none !important;
   text-transform: uppercase;
-  font-family: "Ubuntu Mono", monospace;
+  font-family: "Zilla Slab", serif;
   transition: opacity 0.3s ease-in;
 }
 .customNavlinks:hover {
@@ -106,4 +111,85 @@ body {
 }
 .socialLinks:hover {
   color: rgb(255, 255, 255);
+}
+
+.homeText {
+  font-family: "Zilla Slab", serif !important;
+  color: rgb(255, 255, 255);
+}
+.homeText p {
+  position: relative;
+  opacity: 0.67;
+  font-family: "Square Peg", cursive;
+  display: inline-block;
+  border-bottom: 2px #f00034 solid;
+  text-transform: none;
+  padding: 0 0.5rem;
+}
+.homeText p::before {
+  font-family: Arial;
+  content: "“";
+  color: #f00034;
+}
+.homeText p::after {
+  font-family: Arial;
+  color: #f00034;
+  content: "”";
+}
+.homeText h2 {
+  opacity: 0.86;
+  font-weight: 800;
+}
+.homeText h2 small {
+  margin: 0;
+  padding: 0;
+  line-height: 1rem;
+}
+.homeText h3 {
+  opacity: 0.5;
+  font-weight: 200;
+}
+.homeText h4 {
+  opacity: 0.67;
+  font-style: italic;
+  font-weight: 400;
+}
+.homeText h4::after {
+  content: ">";
+  color: #f00034;
+  opacity: 1;
+  font-weight: 600;
+}
+.homeText h4::before {
+  content: "</";
+  color: #f00034;
+  opacity: 1;
+  font-weight: 600;
+}
+.homeText h5 {
+  opacity: 0.3;
+  font-weight: 200;
+}
+
+.resetLinks {
+  color: rgba(255, 255, 255, 0.47);
+  text-decoration: none;
+}
+.resetLinks:hover {
+  color: rgb(255, 255, 255);
+}
+
+.homeBtns button {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgba(255, 255, 255, 0.47);
+  border-radius: 0;
+  border-right: 2px rgb(255, 255, 255) solid;
+  font-size: 1rem;
+  padding: 0.3rem 0.7rem;
+}
+.homeBtns button:hover {
+  color: rgb(255, 255, 255);
+}
+.homeBtns button:last-child {
+  border: none;
 }/*# sourceMappingURL=main.css.map */
