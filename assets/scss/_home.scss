@@ -4,7 +4,7 @@
 
   p {
     position: relative;
-    opacity: 0.67;
+    opacity: 1;
     font-family: "Square Peg", cursive;
     display: inline-block;
     border-bottom: 2px $importantColor solid;
@@ -27,16 +27,10 @@
   h2 {
     opacity: 0.86;
     font-weight: 800;
-
-    small {
-      margin: 0;
-      padding: 0;
-      line-height: 1rem;
-    }
   }
 
   h3 {
-    opacity: 0.5;
+    opacity: 0.67;
     font-weight: 200;
   }
 
