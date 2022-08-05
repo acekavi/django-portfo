@@ -1,0 +1,48 @@
+.imageBG {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: auto;
+  filter: grayscale(1);
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+.designBody {
+  background-image: linear-gradient( rgba(233,233,233, 0) 0%, #000000 75%);;
+
+  h4 {
+    font-family: $accentFont !important;
+    color: $primaryColor;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-family: $primaryFont !important;
+    color: $bodyColor;
+    background-color: $primaryColor;
+    display: inline;
+    padding: 2px 5px;
+    text-transform: uppercase;
+    font-size: smaller;
+  }
+
+  span{
+    color: $primaryColor;
+  }
+}
+
+.lead{
+  span{
+    color: #ff78a5;
+  }
+}
+.AppIcons {
+  width: 20px;
+  margin: 0 0.2rem;
+}

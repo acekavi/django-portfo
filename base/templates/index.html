@@ -15,25 +15,31 @@
 
     <div class="col-lg-6 text-uppercase homeText text-start">
       
-      <p class="display-6 py-2">Do what excites!</i></p><br>
+      <p class="display-6 py-2">Live a little</i></p><br>
 
       <h3>Hi! I'm</h3>
       <h2 class="display-2">Avishka Kavinda</h2>
       <h4 class="lh-1 mb-2">Creative Developer</h4>
-      <h5>
+      <blockquote>
         From Sri Lanka
-      </h5>
+      </blockquote>
       
       <div class="btn-group homeBtns mt-3" role="group" aria-label="Home Buttons">
-        <button type="button" class="btn" data-mdb-color="dark">
+        <a href="{% static 'Resume.pdf'%}" class="button" download="Avishka.pdf"><button type="button" class="btn" data-mdb-color="dark">
           Resume
-        </button>
-        <button type="button" class="btn" data-mdb-color="dark">
+        </button></a>
+        
+        <a href="/projects"><button type="button" class="btn" data-mdb-color="dark">
           Projects
-        </button>
-        <button type="button" class="btn" data-mdb-color="dark">
+        </button></a>
+
+        <a href="/designs"><button type="button" class="btn" data-mdb-color="dark">
+          Designs
+        </button></a>
+
+        <a href="/about"><button type="button" class="btn" data-mdb-color="dark">
           Hire me
-        </button>
+        </button></a>
       </div>
       
     </div>

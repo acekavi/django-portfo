@@ -54,37 +54,29 @@
     }
   }
 
-  h5 {
-    opacity: 0.3;
+  blockquote {
+    opacity: 0.5;
     font-weight: 200;
   }
 }
 
-.resetLinks {
-  color: $secondaryColor;
-  text-decoration: none;
-
-  &:hover {
-    color: $primaryColor;
-  }
-}
-
-.homeBtns{
-  button{
-    font-family: $primaryFont;
-    color: $secondaryColor;
-    border-radius: 0;
+.homeBtns {
+  a {
     border-right: 2px $primaryColor solid;
-    font-size: 1rem;
-    padding: 0.3rem 0.7rem;
+    button {
+      font-family: $primaryFont;
+      color: $secondaryColor;
+      border-radius: 0;
+      font-size: 1rem;
+      padding: 0.3rem 0.7rem;
 
-    &:hover{
-      color: $primaryColor;
+      &:hover {
+        color: $primaryColor;
+      }
     }
 
-    &:last-child{
+    &:last-child {
       border: none;
     }
   }
-
 }

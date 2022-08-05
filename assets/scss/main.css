@@ -9,6 +9,14 @@ body {
   background-position: center center;
 }
 
+a {
+  color: rgba(255, 255, 255, 0.47) !important;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(255, 255, 255) !important;
+}
+
 .navLinks {
   list-style-type: none !important;
   display: none;
@@ -161,30 +169,72 @@ body {
   opacity: 1;
   font-weight: 600;
 }
-.homeText h5 {
-  opacity: 0.3;
+.homeText blockquote {
+  opacity: 0.5;
   font-weight: 200;
 }
 
-.resetLinks {
-  color: rgba(255, 255, 255, 0.47);
-  text-decoration: none;
+.homeBtns a {
+  border-right: 2px rgb(255, 255, 255) solid;
 }
-.resetLinks:hover {
-  color: rgb(255, 255, 255);
-}
-
-.homeBtns button {
+.homeBtns a button {
   font-family: "Source Sans Pro", sans-serif;
   color: rgba(255, 255, 255, 0.47);
   border-radius: 0;
-  border-right: 2px rgb(255, 255, 255) solid;
   font-size: 1rem;
   padding: 0.3rem 0.7rem;
 }
-.homeBtns button:hover {
+.homeBtns a button:hover {
   color: rgb(255, 255, 255);
 }
-.homeBtns button:last-child {
+.homeBtns a:last-child {
   border: none;
+}
+
+.projectGrid {
+  display: inline;
+}
+
+.imageBG {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: auto;
+  filter: grayscale(1);
+  transition: all 0.2s ease-in;
+}
+.imageBG:hover {
+  filter: grayscale(0);
+}
+
+.designBody {
+  background-image: linear-gradient(rgba(233, 233, 233, 0) 0%, #000000 75%);
+}
+.designBody h4 {
+  font-family: "Zilla Slab", serif !important;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: 600;
+}
+.designBody h6 {
+  font-family: "Source Sans Pro", sans-serif !important;
+  color: rgb(18, 18, 18);
+  background-color: rgb(255, 255, 255);
+  display: inline;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  font-size: smaller;
+}
+.designBody span {
+  color: rgb(255, 255, 255);
+}
+
+.lead span {
+  color: #ff78a5;
+}
+
+.AppIcons {
+  width: 20px;
+  margin: 0 0.2rem;
 }/*# sourceMappingURL=main.css.map */

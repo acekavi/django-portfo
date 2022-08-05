@@ -2,8 +2,12 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 
-$secondaryColor: rgba(255, 255, 255, 0.47);
+$bodyColor: rgb(18,18,18);
+$emphasisBg: rgb(50, 50, 50);
+
 $primaryColor: rgb(255, 255, 255);
+$secondaryColor: rgba(255, 255, 255, 0.47);
+
 $primaryAccent: rgb(12,94,164);
 $importantColor: #f00034;
 $accentFont: 'Zilla Slab', serif;
@@ -18,6 +22,18 @@ body {
   background-position:center center;
 }
 
+a {
+  color: $secondaryColor !important;
+  text-decoration: none;
+
+  &:hover {
+    color: $primaryColor !important;
+  }
+}
+
 @import 'navbar';
 @import 'home';
 @import 'projects';
+@import 'designs';
+@import 'about';
+
