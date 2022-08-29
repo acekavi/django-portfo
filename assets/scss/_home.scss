@@ -1,62 +1,22 @@
-.homeText {
-  font-family: $accentFont !important;
-  color: $primaryColor;
 
-  p {
-    position: relative;
+.quote {
+
+  &::after {
+    font-family: Arial;
+    content: "\201D";
+    color: $importantColor;
     opacity: 1;
-    font-family: "Square Peg", cursive;
-    display: inline-block;
-    border-bottom: 2px $importantColor solid;
-    text-transform: none;
-    padding: 0 0.5rem;
-
-    &::before {
-      font-family: Arial;
-      content: "\201C";
-      color: $importantColor;
-    }
-
-    &::after {
-      font-family: Arial;
-      color: $importantColor;
-      content: "\201D";
-    }
+    font-weight: 600;
+    font-size: larger;
   }
 
-  h2 {
-    opacity: 0.86;
-    font-weight: 800;
-  }
-
-  h3 {
-    opacity: 0.67;
-    font-weight: 200;
-  }
-
-  h4 {
-    opacity: 0.67;
-    font-style: italic;
-    font-weight: 400;
-
-    &::after {
-      content: ">";
-      color: $importantColor;
-      opacity: 1;
-      font-weight: 600;
-    }
-
-    &::before {
-      content: "</";
-      color: $importantColor;
-      opacity: 1;
-      font-weight: 600;
-    }
-  }
-
-  blockquote {
-    opacity: 0.5;
-    font-weight: 200;
+  &::before {
+    font-family: Arial;
+    content: "\201C";
+    color: $importantColor;
+    opacity: 1;
+    font-weight: 600;
+    font-size: larger;
   }
 }
 

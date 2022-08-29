@@ -2,10 +2,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;1,400;1,500;1,600&family=Source+Sans+Pro:wght@200;300;400;600&family=Square+Peg&family=Zilla+Slab:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 body {
+  position: relative;
   background: #121212;
+  overflow-x: hidden;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10000;
+}
+.background .backgroundImage {
+  width: 100vw;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center center;
 }
 
@@ -17,10 +31,36 @@ a:hover {
   color: rgb(255, 255, 255) !important;
 }
 
+.monofont {
+  font-family: "Zilla Slab", serif !important;
+  opacity: 0.67;
+  font-weight: 200;
+}
+
+.dark .customNavlinks {
+  color: rgb(18, 18, 18) !important;
+}
+.dark .navLogo {
+  color: rgb(18, 18, 18) !important;
+}
+.dark .navLogo img {
+  filter: invert(1);
+}
+.dark .navLogo::before {
+  color: rgb(18, 18, 18) !important;
+}
+.dark .hambars {
+  background-color: rgb(18, 18, 18) !important;
+}
+.dark .socialLinks {
+  color: rgb(18, 18, 18) !important;
+}
+
 .navLinks {
   list-style-type: none !important;
   display: none;
   transition: 0.3 ease-in-out;
+  z-index: 100;
 }
 
 .customNavlinks {
@@ -121,57 +161,21 @@ a:hover {
   color: rgb(255, 255, 255);
 }
 
-.homeText {
-  font-family: "Zilla Slab", serif !important;
-  color: rgb(255, 255, 255);
-}
-.homeText p {
-  position: relative;
+.quote::after {
+  font-family: Arial;
+  content: "”";
+  color: #f00034;
   opacity: 1;
-  font-family: "Square Peg", cursive;
-  display: inline-block;
-  border-bottom: 2px #f00034 solid;
-  text-transform: none;
-  padding: 0 0.5rem;
+  font-weight: 600;
+  font-size: larger;
 }
-.homeText p::before {
+.quote::before {
   font-family: Arial;
   content: "“";
   color: #f00034;
-}
-.homeText p::after {
-  font-family: Arial;
-  color: #f00034;
-  content: "”";
-}
-.homeText h2 {
-  opacity: 0.86;
-  font-weight: 800;
-}
-.homeText h3 {
-  opacity: 0.67;
-  font-weight: 200;
-}
-.homeText h4 {
-  opacity: 0.67;
-  font-style: italic;
-  font-weight: 400;
-}
-.homeText h4::after {
-  content: ">";
-  color: #f00034;
   opacity: 1;
   font-weight: 600;
-}
-.homeText h4::before {
-  content: "</";
-  color: #f00034;
-  opacity: 1;
-  font-weight: 600;
-}
-.homeText blockquote {
-  opacity: 0.5;
-  font-weight: 200;
+  font-size: larger;
 }
 
 .homeBtns a {
@@ -237,4 +241,12 @@ a:hover {
 .AppIcons {
   width: 20px;
   margin: 0 0.2rem;
+}
+
+.intro-section {
+  height: 100vh;
+}
+
+.contact-section {
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

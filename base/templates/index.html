@@ -13,16 +13,10 @@
       />
     </div>
 
-    <div class="col-lg-6 text-uppercase homeText text-start">
+    <div class="col-lg-6 text-uppercase homeText text-center">
       
-      <p class="display-6 py-2">Live a little</i></p><br>
-
-      <h3>Hi! I'm</h3>
-      <h2 class="display-2">Avishka Kavinda</h2>
-      <h4 class="lh-1 mb-2">Creative Developer</h4>
-      <blockquote>
-        From Sri Lanka
-      </blockquote>
+      <h3 class="quote text-light monofont">This world has way too many colors in it,
+      I prefer it in</br>black & white</h3>
       
       <div class="btn-group homeBtns mt-3" role="group" aria-label="Home Buttons">
         <a href="{% static 'Resume.pdf'%}" class="button" download="Avishka.pdf"><button type="button" class="btn" data-mdb-color="dark">
@@ -47,9 +41,13 @@
   </div>
 </div>
 
+<div class="background">
+  <div class="backgroundImage"></div>
+</div>
+
 <script>
   $(document).ready(function () {
-    $("body").css({
+    $(".backgroundImage").css({
       "background-image": "url('{% static 'images/homeBG.svg' %}')",
     });
   });

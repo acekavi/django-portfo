@@ -1,7 +1,35 @@
+.dark{
+
+  .customNavlinks {
+    color: $bodyColor !important;
+  }
+  
+  .navLogo {
+    color: $bodyColor !important;
+
+    img{
+      filter: invert(1);
+    }
+
+    &::before {
+      color: $bodyColor !important;
+    }
+  }
+
+  .hambars {
+    background-color: $bodyColor !important;
+  }
+
+  .socialLinks {
+    color: $bodyColor !important;
+  }
+}
+
 .navLinks{
   list-style-type: none !important;
   display: none;
   transition: 0.3 ease-in-out;
+  z-index: 100;
 }
 
 .customNavlinks {

@@ -37,6 +37,7 @@ class Design(models.Model):
         ('User Interface', 'User Interface'),
         ('Product Design', 'Product'),
         ('Manipulation', 'Manipulation'),
+        ('AI', 'AI')
     )
     
     id = models.UUIDField (primary_key = True ,default = uuid.uuid4, editable = False )

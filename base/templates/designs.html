@@ -1,16 +1,16 @@
 {% extends "layout.html" %} {% load static %} 
-{% block title %}Projects{%endblock %}
+{% block title %}Designs{%endblock %}
 {% block content %}
 <div class="container px-0 py-5" id="custom-cards">
   <section class=" text-center container">
 		<div class="row py-lg-2 text-light">
 			<div class="col-lg-6 col-md-8 mx-auto">
-				<h1 class="fw-light">I make digital art for fun!</h1>
-				<p class="lead text-muted">
+				<h3 class="fw-light quote text-uppercase monofont">Learn the rules like a pro, so you can break them like an artist</h3>
+				<!-- <p class="lead text-muted">
 					I'm a passionate digital artist. Although I'm constantly learning, I have worked as a freelancer for a while now.
           Drawing with just the mouse takes a little bit of time since I don't yet have any drawing equipment.
         </br>If you could lend me a hand to afford a graphics tablet, that would be awesome <span>:)</span>
-				</p>
+				</p> -->
 				<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="acekavi" data-color="#FF5F5F" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
 			</div>
 		</div>
@@ -22,19 +22,19 @@
   {% for design in designs %}
     <section class="col">
       <div class="single-card position-relative">
-        <a href="{{ design.behance }}">
+        <a href="{{ design.behance }}" target="_blank">
           <div class="image-bg rounded-0 imageBG"
             style="background-image: url('{{ design.bannerImg}}');"
             ></div>
         </a>
 
+        
         <div class="designBody px-3 py-3 position-absolute start-0 bottom-0 w-100">
-          <h4>{{ design.name|title }}</h4>
-          <h6 class="artType fw-bold">{{ design.artworkType }}</h6>
-
-          <div class="usedTools flex-row gap-3 g-3" data-apps="{{ design.toolsUsed }}" >
-            <span>Tools used : </span>
+          <div class="usedTools flex-row gap-3 g-3 float-start" data-apps="{{ design.toolsUsed }}" >
+            <!-- <span>Tools used : </span> -->
           </div>
+          <h6 class="artType fw-bold float-end">{{ design.artworkType }}</h6>
+          <h4>{{ design.name|title }}</h4>
 
         </div>
       </div>
@@ -44,10 +44,16 @@
   </div>
 </div>
 
+
+<div class="background">
+  <div class="backgroundImage"></div>
+</div>
+
 <script>
   $(document).ready(function () {
-    $("body").css({
-      "background-image": "url('{% static 'images/akatsuki.svg' %}')",
+
+    $(".backgroundImage").css({
+      "background-image": "url('{% static 'images/designBG.jpg' %}')",
     });
 
     const usedAppArr = $(".usedTools");

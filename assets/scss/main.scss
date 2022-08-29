@@ -15,11 +15,26 @@ $primaryFont: 'Source Sans Pro', sans-serif;
 $secondaryFont: 'Playfair Display', serif;
 
 body {
+  position: relative;
   background: #121212;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:center center;
+  overflow-x: hidden;
+}
+
+.background{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10000;
+
+  .backgroundImage{
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    background-position:center center;
+  }
 }
 
 a {
@@ -29,6 +44,13 @@ a {
   &:hover {
     color: $primaryColor !important;
   }
+}
+
+.monofont{
+  font-family: $accentFont !important;
+
+  opacity: 0.67;
+  font-weight: 200;
 }
 
 @import 'navbar';
