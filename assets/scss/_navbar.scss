@@ -1,27 +1,11 @@
 .dark{
-
   .customNavlinks {
     color: $bodyColor !important;
   }
-  
-  .navLogo {
-    color: $bodyColor !important;
-
-    img{
-      filter: invert(1);
-    }
-
-    &::before {
-      color: $bodyColor !important;
-    }
-  }
 
   .hambars {
-    background-color: $bodyColor !important;
-  }
-
-  .socialLinks {
-    color: $bodyColor !important;
+    filter: invert(1) !important;
+    mix-blend-mode: difference !important;
   }
 }
 

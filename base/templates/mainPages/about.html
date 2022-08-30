@@ -1,9 +1,9 @@
-{% extends "layout.html" %} {% load static %} 
+{% extends "misc/layout.html" %} {% load static %} 
 {% block title %}Contact{%endblock %}
 {% block content %}
 
 <section class="intro-section d-flex justify-content-center">
-  <div class="text-black monofont align-self-center text-center">
+  <div class="text-white monofont align-self-center text-center">
     <div class="row">
       <h1 class="text-uppercase fw-bold">Avishka Kavinda</h1>
     </div>
@@ -14,16 +14,21 @@
       <blockquote class="normal">UI Designer | Digital Artist | Developer | Game Dev | Streamer</blockquote>
       <blockquote class="alternate hide">Doctor | Lawyer | Teacher | Plumber | Astronaut</blockquote>
     </div>
+
+    <div class="row">
+				<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="acekavi" data-color="#333333" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="rgb(12,94,164)" ></script>
+    </div>
   </div>
 </section>
 
 <section class="contact-section container ">
 
-  <div class="row col-10 monofont my-5 text-light">
+  <div class="row col-10 monofont my-5 text-white">
     <h1 class="">Send me an E-mail</h1>
   </div>
 
   <div class="row col-10 col-md-5 d-flex align-content-center justify-content-center">
+
   <form method="post" action="." class="align-self-center">
     {% csrf_token %}
 
@@ -53,15 +58,16 @@
     </div>
 
     <div class="form-outline form-white mb-5">
-      <button type="submit" class="btn btn-primary btn-block w-auto">Contact Me</button>
+      <button type="submit" class="btn btn-info">Contact Me</button>
     </div>
   </form>
+  {% include 'misc/messages.html' %}
 </div>
 
 </section>
 
 <div class="background">
-  <div class="backgroundImage"></div>
+  <div class="backgroundImage alteredBG"></div>
 </div>
 
 <script>
@@ -71,27 +77,6 @@
     });
 
     $("nav").addClass("dark");
-    $(".alternate").hide();
-
-    $(".clickable").click(() =>{
-      if($(".alternate").is(":visible")){
-        $(".alternate").hide();
-        $(".normal").show();
-      }else{
-        $(".alternate").show();
-        $(".normal").hide();
-      }
-    });
-    
-    $(".clickable").mousedown(()=>{
-      $(".clickable").css("cursor", 'grabbing');
-    })
-    $(".clickable").mouseenter(()=>{
-      $(".clickable").css("cursor", 'grab');
-    })
-    $(".clickable").mouseup(()=>{
-      $(".clickable").css("cursor", 'grab');
-    })
   });
 </script>
 {% endblock %}

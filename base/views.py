@@ -2,22 +2,23 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
+from django.contrib import messages
 
 from .models import *
 from .forms import ContactForm
 
 # Create your views here.
 def home(request):
-    return render(request, "index.html")
+    return render(request, "mainPages/index.html")
 
 
 def projects(request):
     # projects = {'projects' : Project.objects.all()}
-    return render(request, "projects.html")
+    return render(request, "mainPages/projects.html")
 
 def designs(request):
     context = {'designs' : Design.objects.all()}
-    return render(request, "designs.html", context)
+    return render(request, "mainPages/designs.html", context)
 
 def about(request):
     if request.method == 'POST':
@@ -30,7 +31,7 @@ def about(request):
             linkedin = form.cleaned_data['linkedin']
             message = form.cleaned_data['message']
 
-            html = render_to_string('email.html', {
+            html = render_to_string('misc/email.html', {
                 'name': name,
                 'subject': subject,
                 'email': email,
@@ -39,14 +40,15 @@ def about(request):
             })
 
             send_mail(subject, message, email, ['dfntlynotace@gmail.com', 'avishkakavindagamage@gmail.com'], html_message=html)
-
+            messages.success(request, 'Contact request submitted successfully.')
             return redirect('about')
     else:
         form = ContactForm()
+        messages.error(request, form.errors)
 
-    return render(request, "about.html", {
+    return render(request, "mainPages/about.html", {
         'form': form
     })
 
 def mind(request):
-    return render(request, "mind.html")
+    return render(request, "mainPages/mind.html")

@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% load static %} 
+{% extends "misc/layout.html" %} {% load static %} 
 {% block title %}Designs{%endblock %}
 {% block content %}
 <div class="container px-0 py-5" id="custom-cards">
@@ -11,7 +11,6 @@
           Drawing with just the mouse takes a little bit of time since I don't yet have any drawing equipment.
         </br>If you could lend me a hand to afford a graphics tablet, that would be awesome <span>:)</span>
 				</p> -->
-				<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="acekavi" data-color="#FF5F5F" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
 			</div>
 		</div>
 	</section>
@@ -51,30 +50,28 @@
 
 <script>
   $(document).ready(function () {
-
     $(".backgroundImage").css({
-      "background-image": "url('{% static 'images/designBG.jpg' %}')",
+      "background-image": "url('{% static 'images/designBG.svg' %}')",
     });
 
-    const usedAppArr = $(".usedTools");
-    usedAppArr.each((index,element) =>{
-      $(element).data("apps").split(",").forEach(thisItem => {
-        if(thisItem === "AI"){
-          $(element).append( `<img src="{% static 'icons/AI.svg' %}" class="AppIcons"></img>` );
-        }else if(thisItem === "PS"){
-          $(element).append( `<img src="{% static 'icons/PS.svg' %}" class="AppIcons"></img>` );
-        }else if(thisItem === "xD"){
-          $(element).append( `<img src="{% static 'icons/xD.svg' %}" class="AppIcons"></img>` );
-        }else if(thisItem === "Fi"){
-          $(element).append( `<img src="{% static 'icons/Fi.svg' %}" class="AppIcons"></img>` );
-        }else if(thisItem === "Un"){
-          $(element).append( `<img src="{% static 'icons/Un.svg' %}" class="AppIcons"></img>` );
-        }
-      });
+      
+  const usedAppArr = $(".usedTools");
+  usedAppArr.each((index,element) =>{
+    $(element).data("apps").split(",").forEach(thisItem => {
+      if(thisItem === "AI"){
+        $(element).append( `<img src="{% static 'icons/AI.svg' %}" class="AppIcons"></img>` );
+      }else if(thisItem === "PS"){
+        $(element).append( `<img src="{% static 'icons/PS.svg' %}" class="AppIcons"></img>` );
+      }else if(thisItem === "xD"){
+        $(element).append( `<img src="{% static 'icons/xD.svg' %}" class="AppIcons"></img>` );
+      }else if(thisItem === "Fi"){
+        $(element).append( `<img src="{% static 'icons/Fi.svg' %}" class="AppIcons"></img>` );
+      }else if(thisItem === "Un"){
+        $(element).append( `<img src="{% static 'icons/Un.svg' %}" class="AppIcons"></img>` );
+      }
     });
-
   });
-  
+  });
 </script>
 
 {% endblock %}

@@ -40,20 +40,9 @@ a:hover {
 .dark .customNavlinks {
   color: rgb(18, 18, 18) !important;
 }
-.dark .navLogo {
-  color: rgb(18, 18, 18) !important;
-}
-.dark .navLogo img {
-  filter: invert(1);
-}
-.dark .navLogo::before {
-  color: rgb(18, 18, 18) !important;
-}
 .dark .hambars {
-  background-color: rgb(18, 18, 18) !important;
-}
-.dark .socialLinks {
-  color: rgb(18, 18, 18) !important;
+  filter: invert(1) !important;
+  mix-blend-mode: difference !important;
 }
 
 .navLinks {
@@ -234,10 +223,6 @@ a:hover {
   color: rgb(255, 255, 255);
 }
 
-.lead span {
-  color: #ff78a5;
-}
-
 .AppIcons {
   width: 20px;
   margin: 0 0.2rem;
@@ -249,4 +234,22 @@ a:hover {
 
 .contact-section {
   height: 100vh;
+}
+
+.alteredBG {
+  background-position: center right !important;
+  -webkit-clip-path: circle(45.9% at 100% 49%);
+          clip-path: circle(45.9% at 100% 49%);
+}
+
+.bmc-btn {
+  background-color: #333 !important;
+  border-radius: 0% !important;
+}
+.bmc-btn span {
+  margin: 0;
+}
+
+.btn-info {
+  background-color: rgb(12, 94, 164);
 }/*# sourceMappingURL=main.css.map */
