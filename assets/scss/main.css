@@ -8,7 +8,7 @@ body {
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: -10000;
@@ -33,16 +33,30 @@ a:hover {
 
 .monofont {
   font-family: "Zilla Slab", serif !important;
-  opacity: 0.67;
   font-weight: 200;
+}
+
+.btn {
+  background-repeat: no-repeat;
 }
 
 .dark .customNavlinks {
   color: rgb(18, 18, 18) !important;
 }
+.dark .navLogo {
+  color: rgb(18, 18, 18) !important;
+}
+.dark .navLogo img {
+  filter: invert(1);
+}
+.dark .navLogo::before {
+  color: rgb(18, 18, 18) !important;
+}
 .dark .hambars {
-  filter: invert(1) !important;
-  mix-blend-mode: difference !important;
+  background-color: rgb(18, 18, 18) !important;
+}
+.dark .socialLinks {
+  color: rgb(18, 18, 18) !important;
 }
 
 .navLinks {
@@ -169,16 +183,17 @@ a:hover {
 
 .homeBtns a {
   border-right: 2px rgb(255, 255, 255) solid;
-}
-.homeBtns a button {
   font-family: "Source Sans Pro", sans-serif;
   color: rgba(255, 255, 255, 0.47);
   border-radius: 0;
   font-size: 1rem;
   padding: 0.3rem 0.7rem;
 }
-.homeBtns a button:hover {
+.homeBtns a:hover {
   color: rgb(255, 255, 255);
+  border-radius: 0;
+  border: none;
+  border-right: 2px rgb(255, 255, 255) solid;
 }
 .homeBtns a:last-child {
   border: none;
@@ -229,17 +244,17 @@ a:hover {
 }
 
 .intro-section {
-  height: 100vh;
+  height: 90vh;
 }
 
 .contact-section {
-  height: 100vh;
+  height: 90vh;
 }
 
-.alteredBG {
+.background .alteredBG {
+  -webkit-clip-path: polygon(90% 0, 100% 20%, 100% 100%, 90% 100%, 50% 0);
+          clip-path: polygon(90% 0, 100% 20%, 100% 100%, 90% 100%, 50% 0);
   background-position: center right !important;
-  -webkit-clip-path: circle(45.9% at 100% 49%);
-          clip-path: circle(45.9% at 100% 49%);
 }
 
 .bmc-btn {
@@ -250,6 +265,7 @@ a:hover {
   margin: 0;
 }
 
-.btn-info {
-  background-color: rgb(12, 94, 164);
+.btn .fab {
+  width: 1rem !important;
+  height: 1rem !important;
 }/*# sourceMappingURL=main.css.map */

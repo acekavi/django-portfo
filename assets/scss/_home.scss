@@ -23,16 +23,17 @@
 .homeBtns {
   a {
     border-right: 2px $primaryColor solid;
-    button {
-      font-family: $primaryFont;
-      color: $secondaryColor;
-      border-radius: 0;
-      font-size: 1rem;
-      padding: 0.3rem 0.7rem;
+    font-family: $primaryFont;
+    color: $secondaryColor;
+    border-radius: 0;
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
 
-      &:hover {
-        color: $primaryColor;
-      }
+    &:hover {
+      color: $primaryColor;
+      border-radius: 0;
+      border: none;
+      border-right: 2px $primaryColor solid;
     }
 
     &:last-child {

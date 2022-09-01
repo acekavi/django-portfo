@@ -50,5 +50,14 @@ def about(request):
         'form': form
     })
 
-def mind(request):
-    return render(request, "mainPages/mind.html")
+def error_404(request, exception=None):
+        data = {
+            'error' : "404 Page not found!"
+        }
+        return render(request,'mainPages/404.html', data)
+
+def error_500(request, exception=None):
+        data = {
+            'error' : "500 Internal server error!"
+        }
+        return render(request,'mainPages/404.html', data)

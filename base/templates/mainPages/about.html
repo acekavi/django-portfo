@@ -21,52 +21,77 @@
   </div>
 </section>
 
-<section class="contact-section container ">
+<section class="contact-section container">
 
-  <div class="row col-10 monofont my-5 text-white">
-    <h1 class="">Send me an E-mail</h1>
+  <div class="row col-10 monofont mb-2 ms-5 text-white">
+    <h1>Hire me?</h1>
   </div>
 
-  <div class="row col-10 col-md-5 d-flex align-content-center justify-content-center">
+  <div class="row col-10 col-md-5 d-flex align-content-center justify-content-center ms-5">
 
-  <form method="post" action="." class="align-self-center">
-    {% csrf_token %}
+    <form method="post" action="." class="align-self-center">
+      {% csrf_token %}
 
-    <div class="form-outline form-white mb-5">
-      <input type="text" name="name" id="nameInput" class="form-control" required>
-      <label class="form-label" for="nameInput">Full Name</label>
-    </div>
+      <div class="form-floating mb-3" title="John Doe">
+        <input type="text" name="name" class="form-control" id="nameInput" placeholder="John Doe" required>
+        <label for="nameInput">Full Name</label>
+      </div>
 
-    <div class="form-outline form-white mb-5">
-      <input type="text" name="subject" id="subjectInput" class="form-control" required>
-      <label class="form-label" for="subjectInput">Subject</label>
-    </div>
+      <div class="form-floating mb-3" title="We want to work with you!">
+        <input type="text" name="subject" class="form-control" id="subjectInput" placeholder="We want to work with you!" required>
+        <label for="subjectInput">Email Subject</label>
+      </div>
 
-    <div class="form-outline form-white mb-5">
-      <input type="email" name="email" id="emailInput" class="form-control" required>
-      <label class="form-label" for="emailInput">Email Address</label>
-    </div>
+      <div class="form-floating mb-3" title="name@example.com">
+        <input type="email" name="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+        <label for="emailInput">Email Address</label>
+      </div>
 
-    <div class="form-outline form-white mb-5">
-      <input type="url" name="linkedin" id="linkedinInput" class="form-control" required>
-      <label class="form-label" for="linkedinInput">Linkedin</label>
-    </div>
+      <div class="form-floating mb-3" title="linkedin.com/in/johndoe">
+        <input type="url" name="linkedin" class="form-control" id="linkedinInput" placeholder="linkedin.com/in/johndoe" required>
+        <label for="linkedinInput">Linkedin</label>
+      </div>
 
-    <div class="form-outline form-white mb-5">
-      <textarea name="message" class="form-control" id="messageInput" rows="4" required></textarea>
-      <label class="form-label" for="messageInput">Message</label>
-    </div>
+      <div class="form-floating" title="Leave a message here">
+        <textarea name="message" class="form-control" id="messageInput" style="height: 100px" placeholder="Leave a message here" required></textarea>
+        <label for="messageInput">Comments</label>
+      </div>
 
-    <div class="form-outline form-white mb-5">
-      <button type="submit" class="btn btn-info">Contact Me</button>
-    </div>
-  </form>
-  {% include 'misc/messages.html' %}
-</div>
+      <div class="form-outline form-white my-5 d-flex">
+        <button type="submit" class="btn btn-dark rounded-0">Send</button>
 
+        <h6 class="mx-2 text-white align-self-center">OR</h6>
+
+        <div class="btn-group" role="group" aria-label="Default button group">
+          <a class="btn text-white btn-lg btn-floating" style="background-color: #ac2bac;" href="https://www.instagram.com/acekavi" role="button" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+  
+          <a class="btn text-white btn-lg btn-floating" style="background-color: #3b5998;" href="https://www.facebook.com/acekavi" role="button" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+  
+          <a class="btn text-white btn-lg btn-floating" style="background-color: #333333;" href="https://www.github.com/acekavi" role="button" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+  
+          <a class="btn text-white btn-lg btn-floating" style="background-color: #0082ca;" href="https://linkedin.com/in/acekavi" role="button" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          
+          <a class="btn text-white btn-lg btn-floating" style="background-color: #1266F1;" href="https://www.behance.net/acekavi" role="button" target="_blank">
+            <i class="fab fa-behance"></i>
+          </a>
+        </div>
+        
+      </div>
+    </form>
+
+    {% include 'misc/messages.html' %}
+  </div>
 </section>
 
-<div class="background">
+<div class="background d-none d-md-block">
   <div class="backgroundImage alteredBG"></div>
 </div>
 
@@ -76,7 +101,11 @@
       "background-image": "url('{% static 'images/aboutBG.jpg' %}')",
     });
 
-    $("nav").addClass("dark");
+    $(".customNavlinks").css({
+      "filter": "invert(1)",
+      "mix-blend-mode": "difference",
+    })
+    
   });
 </script>
 {% endblock %}

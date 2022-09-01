@@ -1,0 +1,13 @@
+{% extends "misc/layout.html" %} {% load static %} 
+{% block title %}Oops{%endblock %}
+{% block content %}
+
+<section class=" text-center container mt-5">
+    <div class="row py-lg-2 text-light">
+        <div class="col-lg-6 col-md-8 mx-auto">
+        <h3 class="fw-light quote text-uppercase monofont">{{ error }}</h3>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
